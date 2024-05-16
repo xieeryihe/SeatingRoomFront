@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/menu/menu",
+    "pages/user_info/user_info",
+    "pages/login/login",
+    "pages/reserve/reserve",
+    "pages/select_building/select_building",
+    "pages/reserve_logs/reserve_logs",
+    "pages/seat/seat",
+    "pages/reserve_done/reserve_done",
+    "pages/register/register",
+    "pages/sigin_done/sigin_done",
+    "pages/cancel_done/cancel_done",
+    "pages/rereserve/rereserve",
+    "pages/rereserve_done/rereserve_done"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "预约系统",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": false,
+    "selectedColor": "#33a3dc",
+    "list": [
+
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "菜单",
+        "iconPath": "images/slack.png",
+        "selectedIconPath": "images/slack-2.png"
+      },
+      {
+        "pagePath": "pages/user_info/user_info",
+        "text": "我的",
+        "iconPath": "images/settings-2.png",
+        "selectedIconPath": "images/settings.png"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+    "onLocationChange",
+    "startLocationUpdateBackground",
+    "chooseAddress"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于预定图书馆"
+    }
+  }
+}

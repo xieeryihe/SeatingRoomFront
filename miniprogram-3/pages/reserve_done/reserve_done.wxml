@@ -1,0 +1,26 @@
+<!-- <page-meta root-font-size="system"/> -->
+<view class="page">
+	<view class="weui-msg">
+		<view class="weui-msg__icon-area"><text class="weui-icon-success weui-icon_msg"></text></view>
+		<view class="weui-msg__text-area">
+			<view class="weui-msg__title">操作成功</view>
+			<view class="weui-msg__desc">你已预订成功座位！</view>
+			<view class="weui-msg__custom-area">
+				<view class="weui-form-preview__list">
+					<view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">姓名</label><view class="weui-form-preview__value">{{stu_name}}</view></view>
+					<view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">学号</label><view class="weui-form-preview__value">{{stu_id}}</view></view>
+          <view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">场馆</label><view class="weui-form-preview__value">{{building_name}}</view></view>
+          <view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">教室</label><view class="weui-form-preview__value">{{room_desc}} ({{room_number}})</view></view>
+          <view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">座位号</label><view class="weui-form-preview__value">{{seat_id}}</view></view>
+          <view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">起始时间</label><view class="weui-form-preview__value">{{start_rsv_time}}</view></view>
+          <view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">结束时间</label><view class="weui-form-preview__value">{{end_rsv_time}}</view></view>
+				</view>
+			</view>
+		</view>
+		<view class="weui-msg__opr-area">
+			<view class="weui-btn-area">
+				<navigator class="weui-btn weui-btn_primary" aria-role="button" url="javascript:" bindtap="tap">返回首页</navigator>
+			</view>
+		</view>
+	</view>
+</view>

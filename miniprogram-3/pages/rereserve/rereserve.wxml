@@ -1,0 +1,45 @@
+<!-- 参考文档：https://github.com/Tencent/weui-wxss/blob/master/dist/example/form/form_select.wxml -->
+<view class="container" style="padding: 70rpx; width: 100%;">
+  <view>
+    <h2 class="weui-form__title">请选择时间段</h2>
+  </view>
+  <view class="weui-form__control-area">
+    <view class="weui-cells__group weui-cells__group_form">
+      <view class="weui-cells">
+
+        <view class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+          <view class="weui-cell__hd">
+            <label class="weui-label" style="width: 5em;">起始时间</label>
+          </view>
+          <view class="weui-cell__bd">
+            <picker aria-role="combobox" bindchange="bindPickerBegin1Change" range="{{begin_days}}">
+                <view class="weui-select" style="width: 8em;">{{begin_days[begin_day_value]}}</view>
+            </picker>
+          </view>
+          <view class="weui-cell__bd">
+            <picker aria-role="combobox" bindchange="bindPickerBegin2Change" range="{{begin_times}}">
+                <view class="weui-select" style="width: 6em;">{{begin_times[begin_time_value]}}</view>
+            </picker>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+          <view class="weui-cell__hd">
+            <label class="weui-label" style="width: 5em;">预约时长</label>
+          </view>
+          <view class="weui-cell__bd">
+            <picker aria-role="combobox" bindchange="bindPickerPeriodChange" range="{{periods}}">
+                <view class="weui-select">{{periods[period_value]}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-form__opr-area">
+    <view class="weui-btn weui-btn_primary" aria-role="button" bindtap="rereserve">重新预约</view>
+  </view>
+  
+
+
+</view>

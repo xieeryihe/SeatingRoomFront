@@ -1,0 +1,29 @@
+/* pages/index/index.wxss */
+.table {
+  width: 100%;
+  margin: 20rpx;
+  border-collapse: collapse;
+  box-shadow: 0 0 5rpx rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.cell {
+  flex: 1;
+  padding: 20rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+}
+
+
+.no-data {
+  display: flex;
+  border-bottom: 1rpx solid #f0f0f0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}

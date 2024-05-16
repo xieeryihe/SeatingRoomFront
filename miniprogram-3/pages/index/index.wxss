@@ -1,0 +1,50 @@
+/**index.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.title{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 80rpx;
+  margin-bottom: 150rpx;
+}
+
+.menu {
+  margin-top: 200rpx;
+}
+
+.button {
+  overflow: hidden;
+  display: flex;
+  width: 700rpx;
+  height: 200rpx;
+  margin: 70rpx;
+  color: rgb(0, 0, 0);
+  opacity:0.8;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 47rpx;
+  border-radius: 25rpx; /* 按钮圆角 */
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.2);
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.05;
+}

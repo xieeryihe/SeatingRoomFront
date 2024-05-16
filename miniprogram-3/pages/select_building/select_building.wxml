@@ -1,0 +1,36 @@
+<!-- 参考：https://github.com/Tencent/weui-wxss/blob/master/dist/example/preview/preview.wxml -->
+<view class="container" style="padding: 70rpx; width: 100%">
+	<view style="margin-bottom: 70rpx;">
+    <h2 class="weui-form__title">请选择场馆</h2>
+  </view>
+	<view class="page__bd">
+		<view class="weui-form-preview" wx:for="{{buildings}}" wx:for-item="building" wx:key="buildings" style="margin-bottom: 70rpx;">
+			<view class="weui-form-preview__hd" aria-role="option">
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">场馆名称</label>
+					<em class="weui-form-preview__value">{{building.building_name}}</em>
+				</view>
+			</view>
+			<view aria-labelledby="p1 js_a11y_comma p2 js_a11y_comma p3" class="weui-form-preview__bd" aria-role="option">
+				<view id="p1" class="weui-form-preview__item">
+					<label class="weui-form-preview__label">距离</label>
+					<text class="weui-form-preview__value">{{building.distance}}km</text>
+				</view>
+				<view id="p2" class="weui-form-preview__item">
+					<label class="weui-form-preview__label">地址</label>
+					<text class="weui-form-preview__value">{{building.building_desc}}</text>
+				</view>
+				<view id="p3" class="weui-form-preview__item">
+          <label class="weui-form-preview__label">剩余空位</label>
+          <!-- 字体可以调红/绿代表可预订 -->
+					<text class="weui-form-preview__value">{{building.seat}}</text>
+				</view>
+			</view>
+			<view class="weui-form-preview__ft">
+				<navigator class="weui-form-preview__btn weui-form-preview__btn_primary" aria-role="button" bindtap="reserveConfirm" data-info="{{building}}" url="javascript:">进入预订</navigator>
+			</view>
+		</view>
+		
+		
+	</view>
+</view>

@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container" style="background-image: url('../background.jpeg'); background-size: cover;">
+
+  <view class="mask"></view>
+  <view class="menu">
+   
+    <cover-view class="title">自习座位预约系统</cover-view>
+    <button bindtap="goToLogin" class="button" style="width:600rpx">账号登陆</button>
+    <button bindtap="goToRegister" class="button" style="width:600rpx">用户注册</button>
+  </view>
+</view>

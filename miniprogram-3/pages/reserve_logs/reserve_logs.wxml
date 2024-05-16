@@ -1,0 +1,66 @@
+<!-- reserve_logs.wxml -->
+<view class="container">
+  <view> 这是你的预约记录</view>
+  <view class="table" style="width:749rpx">
+    <view class="row">
+      <!-- 原宽度：107 47 47 107 160 160 -->
+      <view class="cell" style="width: 92rpx;">场馆</view>
+      <view class="cell" style="width: 47rpx;">自习室</view>
+      <view class="cell" style="width: 47rpx;">座位号</view>
+      <!-- <view class="cell" style="width: 107rpx;">预约时间</view> -->
+      <view class="cell" style="width: 92rpx;">状态</view>
+      <view class="cell" style="width: 145rpx;">开始时间</view>
+      <view class="cell" style="width: 145rpx;">结束时间</view>
+      <view class="cell" style="width: 60rpx;"></view>
+      
+    </view>
+    <view wx:if="{{list.length == 0}}" class="no-data">
+      暂无预约数据
+    </view>
+      <view wx:else>
+        <!-- 原宽度：107 67 67 107 140 140 -->
+        <view wx:for="{{list}}" wx:key="index" class="row" wx:for-index="bindex" style="width: 749rpx;">
+        <view class="cell" style="width: 92rpx;">{{item.building_name}}</view>
+        <view class="cell" style="width: 67rpx;">{{item.room_number}}</view>
+        <view class="cell" style="width: 67rpx;">{{item.seat_id}}</view>
+        <!-- <view class="cell" style="width: 107rpx;">{{item.make_rsv_time}}</view> -->
+        <view class="cell" style="width: 92rpx;">{{item.rsv_state}}</view>
+       
+        <view class="cell" style="width: 125rpx;">{{item.start_rsv_time}}</view>
+        <view class="cell" style="width: 125rpx;">{{item.end_rsv_time}}</view>
+        <view class="cell" style="width: 60rpx">
+          <!-- <view wx:if="handleIconType"> -->
+          <view wx:if="{{item.rsv_state == '已预约'}}">
+            <i role="img" class="weui-icon-cancel" bindtap="operate" data-bindex="{{bindex}}"></i>
+            <view aria-role="dialog" aria-modal="true" class="fadeIn" wx:if="{{iosDialog1}}">
+              <view class="weui-mask"></view>
+              <view class="weui-dialog">
+                  <view class="weui-dialog__hd"><strong class="weui-dialog__title">取消预约</strong></view>
+                  <view class="weui-dialog__bd">确认取消预约？</view>
+                  <view class="weui-dialog__ft">
+                      <view aria-role="button" class="weui-dialog__btn weui-dialog__btn_default" bindtap="close">关闭</view>
+                      <view aria-role="button" class="weui-dialog__btn weui-dialog__btn_primary" bindtap="cancelConfirm">确认</view>
+                  </view>
+              </view>
+            </view>
+          </view>
+          <!-- <view wx:else>
+            <i role="img" class="weui-icon-success-circle" bindtap="operate" data-bindex="{{bindex}}"></i>
+            <view aria-role="dialog" aria-modal="true" class="fadeIn" wx:if="{{iosDialog2}}">
+              <view class="weui-mask"></view>
+              <view class="weui-dialog">
+                  <view class="weui-dialog__hd"><strong class="weui-dialog__title">重新预约</strong></view>
+                  <view class="weui-dialog__bd">确认重新预约？</view>
+                  <view class="weui-dialog__ft">
+                      <view aria-role="button" class="weui-dialog__btn weui-dialog__btn_default" bindtap="close">关闭</view>
+                      <view aria-role="button" class="weui-dialog__btn weui-dialog__btn_primary" bindtap="rereserveConfirm">确认</view>
+                  </view>
+              </view>
+            </view>
+          </view> -->
+          
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,63 @@
+
+
+
+<!-- <view class="container" >
+  <view class="title">登陆</view>
+
+  <form class="form" bindsubmit="onLogin" style="width: 700rpx;">
+    <view class="form-item">
+      <input class="input" type="text" name="username" placeholder="学号" style="height: 50rpx;"></input>
+    </view>
+    <view class="form-item">
+      <input class="input" type="password" name="password" placeholder="密码" style="height: 50rpx;"></input>
+    </view>
+    <button class="btn" form-type="submit"  style="width: 600rpx;">登陆</button>
+  </form>
+</view> -->
+
+<page-meta root-font-size="system"/>
+<view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
+ 
+	<view class="weui-form">
+		<view class="weui-form__text-area">
+			<h2 class="weui-form__title">登陆界面</h2>
+			<view class="weui-form__desc">请通过复旦大学学号，注册密码登陆预约系统。</view>
+		</view>
+		<view class="weui-form__control-area">
+			<view class="weui-cells__group weui-cells__group_form">
+
+				<view class="weui-cells">
+					<view class="weui-cell weui-cell_active">
+						<view class="weui-cell__hd"><label class="weui-label">学号</label></view>
+						<view class="weui-cell__bd">
+							<input class="weui-input" name="username" placeholder="请填写本人学号" placeholder-class="weui-input__placeholder" bindinput="inputUsername" />
+						</view>
+					</view>
+
+					<view class="weui-cell weui-cell_active">
+						<view class="weui-cell__hd">
+              <label class="weui-label">密码</label>
+            </view>
+						<view class="weui-cell__bd">
+							<input class="weui-input" name="password" placeholder="请填写密码" type="password" placeholder-class="weui-input__placeholder" bindinput="inputPassword" />
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="weui-form__opr-area">
+			<a aria-role="button" class="weui-btn weui-btn_primary" bindtap="onLogin">登陆</a>
+		</view>
+
+		<view class="weui-form__extra-area">
+			<view class="weui-footer">
+				<view class="weui-footer__links">
+					<navigator url="javascript:" class="weui-footer__link">自习预约系统</navigator>
+				</view>
+				<view class="weui-footer__text">Copyright © 2023-2023</view>
+			</view>
+		</view>
+	</view>
+
+</view>

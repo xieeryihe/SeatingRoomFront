@@ -1,0 +1,34 @@
+/* pages/login/login.wxss */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40rpx;
+  width: 600rpx;
+
+}
+
+.input {
+  flex: 1;
+  border: 1rpx solid #ccc;
+  border-radius: 5rpx;
+  padding: 5rpx;
+  font-size: 40rpx;
+}
+
+.btn {
+  background-color: #82b6ec;
+  color: #fff;
+  border-radius: 5rpx;
+  padding: 10rpx 20rpx;
+  font-size: 30rpx;
+  margin-top: 40rpx;
+}
