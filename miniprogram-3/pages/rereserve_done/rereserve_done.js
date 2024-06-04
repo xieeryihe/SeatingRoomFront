@@ -2,7 +2,7 @@ var app = getApp()
 
 Page({
   data: {
-    stu_name: "wuwuwuw",
+    stu_name: "wyc",
     start_rsv_time : "",
     end_rsv_time : "",
     // room_desc: "", // room_desc好像在预约记录那没有？

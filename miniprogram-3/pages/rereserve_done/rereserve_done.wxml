@@ -11,7 +11,6 @@
 					<view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">学号</label><view class="weui-form-preview__value">{{stu_id}}</view></view>
           <view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">场馆</label><view class="weui-form-preview__value">{{building_name}}</view></view>
           <!-- <view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">教室</label><view class="weui-form-preview__value">{{room_desc}} ({{room_number}})</view></view> -->
-          <!-- room_desc好像在预约记录那没有？ -->
           <view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">教室</label><view class="weui-form-preview__value">{{room_number}}</view></view>
           <view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">座位号</label><view class="weui-form-preview__value">{{seat_id}}</view></view>
           <view class="weui-form-preview__item" aria-role="option"><label class="weui-form-preview__label">起始时间</label><view class="weui-form-preview__value">{{start_rsv_time}}</view></view>
